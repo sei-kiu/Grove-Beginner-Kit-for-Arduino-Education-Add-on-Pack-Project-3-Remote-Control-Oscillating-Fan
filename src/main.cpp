@@ -11,7 +11,7 @@ IRrecv irrecv(RECV_PIN);
 decode_results results;
 
 int pos = 90;   // variable to store the servo position
-int fanPin = 7; // set D6 as control switch
+int fanPin = 7; // set D7 as control switch
 int fanState = LOW;
 int IO = 0;
 
@@ -21,7 +21,7 @@ void setup()
   Serial.println("Enabling IRin"); // remind enabling IR
   irrecv.enableIRIn();             // Start the receiver
   Serial.println("Enabled IRin");
-  myservo.attach(3); // attaches the servo on pin 2 to the servo object
+  myservo.attach(3); // attaches the servo on pin 3 to the servo object
   pinMode(fanPin, OUTPUT);
 }
 

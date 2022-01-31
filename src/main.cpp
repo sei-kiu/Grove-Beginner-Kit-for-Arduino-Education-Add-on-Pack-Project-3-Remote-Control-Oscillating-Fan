@@ -50,7 +50,7 @@ void loop()
 
     if (results.value == 16761405)
     { // fan swing to left
-      for (pos; pos <= 89; pos += 1)
+      for (pos = pos; pos <= 89; pos += 1)
       { // goes from 0 degrees to 90 degrees
         // in steps of 1 degree
         myservo.write(pos); // tell servo to go to position in variable 'pos'
@@ -67,7 +67,7 @@ void loop()
 
     if (results.value == 16712445)
     { // fan swing to right
-      for (pos; pos >= 1; pos -= 1)
+      for (pos = pos; pos >= 1; pos -= 1)
       {                     // goes from 90 degrees to 0 degrees
         myservo.write(pos); // tell servo to go to position in variable 'pos'
         delay(40);          // waits 15ms for the servo to reach the position
